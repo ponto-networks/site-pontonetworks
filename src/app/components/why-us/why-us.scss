@@ -1,0 +1,51 @@
+.why-us {
+  background-color: var(--bg-light);
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+
+    .value-card {
+      background-color: var(--bg-white);
+      border: 3px solid var(--primary-cyan);
+      border-radius: 20px;
+      padding: 50px 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(29, 211, 176, 0.2);
+      }
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        color: var(--primary-cyan);
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      h3 {
+        color: var(--primary-cyan);
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .why-us {
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}

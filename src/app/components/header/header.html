@@ -1,0 +1,27 @@
+<!-- Header com menu fixo no topo -->
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="container">
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/images/pontonetworkslogo.png" alt="Ponto Networks Logo">
+      </div>
+
+      <!-- Menu de navegação -->
+      <ul class="nav-menu" [class.active]="menuActive">
+        <li><a href="#home" (click)="scrollToSection('home')">Home</a></li>
+        <li><a href="#sobre" (click)="scrollToSection('sobre')">Sobre</a></li>
+        <li><a href="#servicos" (click)="scrollToSection('servicos')">Serviços</a></li>
+        <li><a href="#portfolio" (click)="scrollToSection('portfolio')">Portfólio</a></li>
+        <li><a href="#contato" (click)="scrollToSection('contato')">Contato</a></li>
+      </ul>
+
+      <!-- Botão hamburguer para mobile -->
+      <div class="hamburger" (click)="toggleMenu()" [class.active]="menuActive">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </div>
+</header>

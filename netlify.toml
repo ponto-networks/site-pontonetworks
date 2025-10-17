@@ -1,0 +1,9 @@
+# Configuração para deploy no Netlify
+[build]
+  publish = "dist/ponto-networks/browser"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

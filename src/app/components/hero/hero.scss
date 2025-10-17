@@ -1,0 +1,108 @@
+body {
+  background-color: #0c2b40;
+  color: #fff; /* Adicionado para garantir que o texto seja legível no fundo escuro */
+}
+
+/* Estilos da seção Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+  background-image: url(/assets/images/ponto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero .hero-content .hero-text h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.hero .hero-content .hero-text h1 .highlight-cyan {
+  color: var(--primary-cyan);
+  display: block;
+}
+
+.hero .hero-content .hero-text .btn {
+  margin-top: 20px;
+}
+
+.hero .hero-content .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-content .hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.hero .hero-content .hero-image img:hover {
+  transform: scale(1.02);
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 0 50px;
+  }
+
+  .hero .hero-background {
+    width: 100%;
+    opacity: 0.05;
+  }
+
+  .hero .hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero .hero-content .hero-text {
+    text-align: center;
+  }
+
+  .hero .hero-content .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .hero-content .hero-image {
+    order: -1;
+  }
+
+  .hero .hero-content .hero-image img {
+    max-width: 90%;
+  }
+}
